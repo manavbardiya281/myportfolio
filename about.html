@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Manav Bardiya</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Courier+Prime&display=swap" rel="stylesheet">
+  <style>
+    .grid-layout {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .card-sticky {
+      text-align: center;
+      position: sticky;
+      top: 100px;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 2px solid var(--primary);
+    }
+    .name-heading {
+      margin-bottom: 0.5rem;
+    }
+    .primary-text {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .muted-text {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    .flex-wrap-center {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .btn-full-width {
+      width: 100%;
+    }
+    .border-top {
+      margin-top: 1.5rem;
+      border-top: 1px solid var(--glass-border);
+      padding-top: 1rem;
+    }
+    .small-muted-text {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    .section-title {
+      margin-bottom: 1.5rem;
+    }
+    .card-margin {
+      margin-bottom: 2.5rem;
+    }
+    .muted-paragraph {
+      color: var(--text-muted);
+      margin-top: 1rem;
+      line-height: 1.7;
+    }
+    .experience-title {
+      margin-bottom: 1.5rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 1rem;
+    }
+    .experience-card {
+      margin-bottom: 1.5rem;
+      border-left: 2px solid var(--primary);
+    }
+    .flex-space-between {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .job-title {
+      margin: 0;
+    }
+    .job-duration {
+      font-family: 'Courier Prime', monospace;
+      color: var(--primary);
+      font-size: 0.85rem;
+    }
+    .job-description {
+      color: var(--text-muted);
+      font-weight: 600;
+      margin: 0.5rem 0;
+    }
+    .job-list {
+      color: var(--text-muted);
+      margin-left: 1.2rem;
+      list-style-type: disc;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+    .education-title {
+      margin-bottom: 1.5rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 1rem;
+    }
+    .education-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .education-text {
+      color: var(--primary);
+      margin-top: 0.25rem;
+    }
+    .education-duration {
+      text-align: right;
+      font-family: 'Courier Prime', monospace;
+      color: var(--text-muted);
+    }
+    .education-description {
+      color: var(--text-muted);
+      margin-top: 1rem;
+    }
+    .white-border {
+      border-left: 2px solid #fff;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">Manav Bardiya</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <div class="grid-layout">
+      
+      <aside class="reveal">
+        <div class="card card-sticky">
+          <img src="myself.jpg" alt="Manav Bardiya" class="profile-img">
+          
+          <h2 class="name-heading">Manav Bardiya</h2>
+          <p class="primary-text">Computer Engineer</p>
+          <p class="muted-text">Manmad, India</p>
+          
+          <div class="flex-wrap-center">
+            <span class="tag">Fast Learner</span>
+            <span class="tag">Adaptable</span>
+            <span class="tag">Problem Solver</span>
+          </div>
+
+          <a href="ManavBardiya_InternshalaResume-2.pdf" target="_blank" class="btn primary btn-full-width">Download Resume</a>
+          
+          <div class="border-top">
+            <p class="small-muted-text">
+              Open for <strong>Frontend</strong> & <strong>Full Stack</strong> Internships.
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <section>
+        <h1 class="reveal text-highlight section-title">My Journey</h1>
+        
+        <div class="card reveal delay-1 card-margin">
+          <p class="muted-paragraph">
+            I am a third-year <strong>Computer Science & Engineering</strong> student with a strong foundation in building secure, scalable web systems. 
+            While my academic background is rooted in Java/Spring Boot backend architectures, I am passionate about creating intuitive <strong>Frontend User Experiences</strong>.
+            My recent internships in Cloud Security and AI Data Analysis allow me to build frontends that are not just beautiful, but data-driven and secure.
+          </p>
+        </div>
+
+        <h2 class="reveal delay-2 experience-title">Experience</h2>
+        
+        <div class="card reveal delay-2 experience-card">
+          <div class="flex-space-between">
+            <h3 class="job-title">Conversational Data Analysis Intern</h3>
+            <span class="job-duration">Sep 2025 - Oct 2025</span>
+          </div>
+          <p class="job-description">AICTE & VOIS (Virtual)</p>
+          <ul class="job-list">
+            <li>Analyzed large datasets using Large Language Models (LLMs) to extract real-time insights.</li>
+            <li>Mastered prompt engineering and context-driven responses, essential skills for building modern AI-Chat interfaces.</li>
+          </ul>
+        </div>
+
+        <div class="card reveal delay-2 experience-card">
+          <div class="flex-space-between">
+            <h3 class="job-title">Zero Trust Cloud Security Intern</h3>
+            <span class="job-duration">Jul 2025 - Sep 2025</span>
+          </div>
+          <p class="job-description">AICTE & ZScalar (Virtual)</p>
+          <ul class="job-list">
+            <li>Implemented Zero Trust architecture principles and secure network access protocols.</li>
+            <li>Completed practical labs on cloud infrastructure protection, ensuring secure backend-to-frontend communication.</li>
+          </ul>
+        </div>
+
+        <div class="card reveal delay-3 experience-card white-border">
+          <div class="flex-space-between">
+            <h3 class="job-title">Technical Assistant</h3>
+            <span class="job-duration">Jan 2025 - May 2025</span>
+          </div>
+          <p class="job-description">SNJB's College Of Engineering</p>
+          <ul class="job-list">
+            <li>Managed digital certification generation and weekly student assessment data.</li>
+            <li>Assisted students with exam-related notices and technical activity coordination.</li>
+          </ul>
+        </div>
+
+        <h2 class="reveal delay-3 education-title">Education</h2>
+        
+        <div class="card reveal delay-3">
+          <div class="education-card">
+            <p class="education-text">Computer Science & Engineering</p>
+            <div class="education-duration">2023 - 2027</div>
+          </div>
+          <p class="education-description">
+            SNJB's Late Sau. Kantabai Bhavarlalji Jain College Of Engineering, Chandwad.
+          </p>
+        </div>
+
+      </section>
+    </div>
+  </main>
+</body>
+</html>

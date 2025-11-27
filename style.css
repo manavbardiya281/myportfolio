@@ -1,0 +1,163 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: #222;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background:#111;
+  color:#fff;
+}
+
+.nav-links {
+  list-style: none;
+  display:flex;
+  gap:20px;
+}
+
+.nav-links a {
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.nav-links a.active, .nav-links a:hover {
+  color: #00d0ff;
+}
+
+.home-section, .about-section, .projects-section, .contact-section {
+  padding: 50px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+/* Enhancing overall design for a professional look */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* Adding hover effects for cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Adding animations for section fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Adding styles for progress bars */
+.progress {
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.progress-fill {
+  background: #00d0ff;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Adding margin-top for section titles */
+.section-title {
+  margin-top: 38px;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+/* Adding custom properties for progress bar widths */
+.progress-fill[data-width="92"] {
+  --progress-width: 92%;
+}
+
+.progress-fill[data-width="86"] {
+  --progress-width: 86%;
+}
+
+.progress-fill[data-width="88"] {
+  --progress-width: 88%;
+}
+
+.progress-fill[data-width="80"] {
+  --progress-width: 80%;
+}
+
+.progress-fill[data-width="70"] {
+  --progress-width: 70%;
+}
+
+.progress-fill[data-width="82"] {
+  --progress-width: 82%;
+}
+
+/* Adding animations for skill progress bars */
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+.progress-fill {
+  animation: fillProgress 2s ease-in-out;
+}
+
+/* Enhancing footer */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #fff;
+  font-size: 0.9rem;
+}

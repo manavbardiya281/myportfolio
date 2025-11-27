@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact - Manav Bardiya</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .form-label {
+      color: var(--text-muted);
+    }
+    .form-input {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--glass-border);
+      padding: 12px;
+      color: white;
+      border-radius: 8px;
+    }
+    .form-button {
+      margin-top: 1rem;
+    }
+    .contact-list {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .contact-item {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .social-button {
+      padding: 8px 16px;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">Manav Bardiya</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1 class="reveal">Get In Touch</h1>
+    <div class="projects-grid">
+      <div class="card reveal delay-1">
+        <form class="form-container"
+      action="https://formsubmit.co/manavbardiya281@gmail.com"
+      method="POST">
+
+        <!-- Hidden Settings -->
+        <input type="hidden" name="_subject" value="New Contact Message From Portfolio">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <!-- User Inputs -->
+        <label class="form-label">Name</label>
+        <input type="text" name="Name" class="form-input" placeholder="Enter your name" required>
+
+        <label class="form-label">Email</label>
+        <input type="email" name="Email" class="form-input" placeholder="Enter your email" required>
+
+        <label class="form-label">Message</label>
+        <textarea name="Message" rows="4" class="form-input" placeholder="Enter your message" required></textarea>
+
+        <button type="submit" class="btn primary form-button">Send Message</button>
+        </form>
+
+      </div>
+
+      <div class="reveal delay-2">
+        <div class="card">
+          <h3>Contact Info</h3>
+          <ul class="contact-list">
+            <li>
+              <div class="contact-item">Email</div>
+              <a href="mailto:manavbardiya281@gmail.com" class="text-highlight">manavbardiya281@gmail.com</a> 
+            </li>
+            <li>
+              <div class="contact-item">Phone</div>
+              <div>+91 7083746903</div> 
+            </li>
+            <li>
+              <div class="contact-item">Socials</div>
+              <div class="social-links">
+                <a href="https://linkedin.com/in/manavbardiya281" target="_blank" rel="noopener" class="btn outline social-button">LinkedIn</a>
+                <a href="https://github.com/manavbardiya281" target="_blank" rel="noopener" class="btn outline social-button">GitHub</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

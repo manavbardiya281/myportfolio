@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manav Bardiya | Frontend & Full Stack Developer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    .flex-wrap {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .section-margin {
+      margin-bottom: 4rem;
+    }
+    .highlight-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .muted-text {
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+    .hero-img-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-img-link {
+      position: relative;
+      display: inline-block;
+    }
+    .hero-img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hero-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      border-radius: 20px;
+      transition: opacity 0.3s ease;
+    }
+    .hero-img-link:hover .hero-overlay {
+      opacity: 1;
+    }
+    .hero-caption {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">Manav Bardiya</div>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero page">
+      <div class="hero-content reveal">
+        <div class="hero-role">&lt;Software Developer Intern /&gt;</div>
+        <h1>Building <span class="text-highlight">Innovative</span><br>Software Solutions.</h1>
+        <p>
+          Hi, I'm <strong>Manav Rajendra Bardiya</strong>. I specialize in creating scalable, efficient, and user-friendly software solutions by combining expertise in backend technologies (Java/Spring Boot) with modern frontend frameworks (React/HTML5).
+        </p>
+        <div class="flex-wrap">
+          <a href="projects.html" class="btn primary">Explore My Projects</a>
+          <a href="ManavBardiya_InternshalaResume-2.pdf" target="_blank" class="btn outline">Download My Resume</a>
+        </div>
+      </div>
+      
+      <div class="hero-img-wrapper reveal delay-2">
+        <img src="code interface.png" alt="Manav Portfolio Interface" class="hero-img">
+      </div>
+    </section>
+
+    <section class="container section-margin">
+      <h2 class="text-highlight reveal highlight-title">Why Software Development?</h2>
+      <div class="projects-grid">
+        <div class="card reveal delay-1">
+          <h3>Problem-Solving Mindset</h3>
+          <p class="muted-text">
+            My experience developing the <strong>Vrunda Safety App</strong> taught me how to address real-world challenges with innovative software solutions.
+          </p>
+        </div>
+        <div class="card reveal delay-2">
+          <h3>Data-Driven Insights</h3>
+          <p class="muted-text">
+            During my internship with <strong>AICTE & VOIS</strong>, I gained valuable experience in leveraging data to create impactful software designs.
+          </p>
+        </div>
+        <div class="card reveal delay-3">
+          <h3>Robust System Design</h3>
+          <p class="muted-text">
+            With a solid foundation in Java/Spring Boot, I excel at designing and implementing scalable backend systems that integrate seamlessly with modern frontends.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

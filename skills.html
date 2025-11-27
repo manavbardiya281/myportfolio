@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Skills - Manav Bardiya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg1:#020412;
+  --bg2:#060819;
+  --bg3:#020117;
+  --primary:#4fd1ff;
+  --paper:#09111f;
+  --border:rgba(255,255,255,.05);
+  --text:#e9ecf4;
+  --muted:#a1acc0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:Poppins,sans-serif;
+  background:linear-gradient(120deg,var(--bg1),var(--bg2),var(--bg3));
+  background-size:300% 300%;
+  animation:gradient 18s ease infinite;
+  color:var(--text);
+}
+@keyframes gradient{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+body::before,body::after{
+  content:"";
+  position:fixed;
+  width:500px;height:500px;
+  border-radius:50%;
+  filter:blur(150px);
+  opacity:.14;
+  z-index:-1;
+  animation:float 25s infinite linear;
+}
+body::before{background:#131515;top:-120px;left:-150px}
+body::after{background:#171718;bottom:-120px;right:-100px;animation-duration:32s}
+@keyframes float{to{transform:translateY(-200px)}}
+
+.site-header{
+  position: sticky;
+  top: 0;
+  background: rgba(5,10,18,.7);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  z-index: 999;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{color:var(--primary);font-size:24px;font-weight:700}
+.nav a{
+  color:var(--muted);
+  margin-left:18px;
+  text-decoration:none;
+}
+.nav a:hover,.nav a.active{color:rgb(33, 29, 29)}
+
+.skills-section {
+    max-width: 1100px;
+    margin: 30px auto; /* 90px top margin is ok if header ~60px */
+    padding: 56px;
+    background: var(--paper);
+    border-radius: 22px;
+    box-shadow: 0 30px 80px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.05);
+    animation: enter 1s ease forwards;
+    position: relative;
+    z-index: 1; /* make sure it’s above the background blur layers */
+}
+
+@keyframes enter{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+
+.skills-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(255,255,255,.05),transparent 65%);
+  pointer-events:none;
+  border-radius:22px;
+}
+
+.title{font-size:36px;font-weight:700}
+.subtitle{color:var(--muted);margin-top:8px}
+
+.badges span{
+  display:inline-block;
+  padding:9px 18px;
+  margin:8px 8px 0 0;
+  border-radius:20px;
+  background:rgba(255,255,255,.02);
+  border:1px solid var(--border);
+  font-size:12px;
+}
+
+.skills-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+.skill-box{
+  background:rgba(255,255,255,.02);
+  border:1px solid var(--border);
+  padding:22px;
+  border-radius:16px;
+  transition:.25s ease;
+}
+.skill-box:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.skill-box h3{color:var(--primary)}
+
+.progress-box{margin-top:45px}
+.progress-item{margin-bottom:15px}
+.progress-item span{display:flex;justify-content:space-between}
+.bar{
+  background:#070b17;
+  height:10px;
+  border-radius:20px;
+  overflow:hidden;
+}
+.fill{
+  height:100%;
+  background:linear-gradient(90deg,#4fd1ff,#6b6cff);
+  width:0;
+  animation:fill 2s forwards;
+}
+@keyframes fill{to{width:var(--val)}}
+
+.icons{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(90px,1fr));
+  gap:16px;
+}
+.icon{
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.02);
+  padding:14px;
+  border-radius:14px;
+  text-align:center;
+  transition:.3s;
+}
+.icon:hover{transform:scale(1.07)}
+
+@media(max-width:600px){
+  .skills-section{padding:32px}
+  .title{font-size:28px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="container">
+<div class="logo">Manav Bardiya</div>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a class="active">Skills</a>
+<a href="projects.html">Projects</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<div class="scroll-container">
+<section class="skills-section">
+
+<h2 class="title">Technical Profile</h2>
+<p class="subtitle">Backend engineer focused on scalable APIs and maintainable architecture.</p>
+
+<div class="badges">
+<span>Backend Engineering</span>
+<span>API Design</span>
+<span>Database Optimization</span>
+<span>Cloud Ready</span>
+</div>
+
+<div class="skills-grid">
+
+<div class="skill-box">
+<h3>Backend Development</h3>
+Java, Spring Boot, REST APIs, JDBC
+</div>
+
+<div class="skill-box">
+<h3>Database Systems</h3>
+MySQL, PostgreSQL, MongoDB
+</div>
+
+<div class="skill-box">
+<h3>Mobile Development</h3>
+Flutter (Android / iOS)
+</div>
+
+<div class="skill-box">
+<h3>Frontend Development</h3>
+HTML, CSS, JavaScript
+</div>
+
+<div class="skill-box">
+<h3>Version Control</h3>
+Git, GitHub
+</div>
+
+<div class="skill-box">
+<h3>Development Tools</h3>
+Postman, VS Code, IntelliJ
+</div>
+
+<div class="skill-box">
+<h3>Core Programming</h3>
+Data Structures, Algorithms, OOP
+</div>
+
+<div class="skill-box">
+<h3>Software Concepts</h3>
+MVC Architecture, Debugging
+</div>
+
+<div class="skill-box">
+<h3>API Development</h3>
+JSON, HTTP Methods, CRUD Operations
+</div>
+
+<div class="skill-box">
+<h3>Databases Concepts</h3>
+Normalization, Indexing, Joins
+</div>
+
+<div class="skill-box">
+<h3>Basic DevOps</h3>
+Docker (Beginner), GitHub Pages
+</div>
+
+<div class="skill-box">
+<h3>Operating Systems</h3>
+Linux Basics, Windows
+</div>
+
+</div>
+
+
+<div class="progress-box">
+<div class="progress-item"><span>Java</span><div class="bar"><div class="fill" style="--val:92%"></div></div></div>
+<div class="progress-item"><span>Spring Boot</span><div class="bar"><div class="fill" style="--val:84%"></div></div></div>
+<div class="progress-item"><span>MySQL</span><div class="bar"><div class="fill" style="--val:88%"></div></div></div>
+<div class="progress-item"><span>REST APIs</span><div class="bar"><div class="fill" style="--val:90%"></div></div></div>
+<div class="progress-item"><span>Git / GitHub</span><div class="bar"><div class="fill" style="--val:86%"></div></div></div>
+<div class="progress-item"><span>Flutter</span><div class="bar"><div class="fill" style="--val:85%"></div></div></div>
+<div class="progress-item"><span>DSA</span><div class="bar"><div class="fill" style="--val:82%"></div></div></div>
+</div>
+
+<div class="icons">
+<div class="icon"><img width="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"><p>Java</p></div>
+<div class="icon"><img width="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"><p>Spring</p></div>
+<div class="icon"><img width="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"><p>React</p></div>
+<div class="icon"><img width="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"><p>Flutter</p></div>
+<div class="icon"><img width="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"><p>MySQL</p></div>
+<div class="icon"><img width="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"><p>MongoDB</p></div>
+<div class="icon"><img width="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"><p>Git</p></div>
+<div class="icon"><img width="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><p>Docker</p></div>
+<div class="icon">
+  <img width="36" src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazonaws.svg" style="filter: invert(1);">
+  <p>AWS</p>
+</div>
+
+<div class="icon"><img width="36" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"><p>Linux</p></div>
+</div>
+
+</section>
+</div>
+</body>
+</html>
